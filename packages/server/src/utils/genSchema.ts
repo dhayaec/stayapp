@@ -1,14 +1,14 @@
-import { mergeTypes, mergeResolvers } from "merge-graphql-schemas";
-import * as path from "path";
-import * as fs from "fs";
-import { makeExecutableSchema } from "graphql-tools";
-import * as glob from "glob";
+import { mergeTypes, mergeResolvers } from 'merge-graphql-schemas';
+import * as path from 'path';
+import * as fs from 'fs';
+import { makeExecutableSchema } from 'graphql-tools';
+import * as glob from 'glob';
 
 export const genSchema = () => {
-  const pathToModules = path.join(__dirname, "../modules");
+  const pathToModules = path.join(__dirname, '../modules');
   const graphqlTypes = glob
     .sync(`${pathToModules}/**/*.graphql`)
-    .map(x => fs.readFileSync(x, { encoding: "utf8" }));
+    .map(x => fs.readFileSync(x, { encoding: 'utf8' }));
 
   const resolvers = glob
     .sync(`${pathToModules}/**/resolvers.?s`)

@@ -7,7 +7,7 @@ import * as RateLimit from 'express-rate-limit';
 import * as RateLimitRedisStore from 'rate-limit-redis';
 
 import { redis } from './redis';
-import { createTypeOrmConn } from './utils/createTypeormConn';
+import { createTypeOrmConn } from './utils/createTypeOrmConn';
 import { confirmEmail } from './routes/confirmEmail';
 import { genSchema } from './utils/genSchema';
 import { redisSessionPrefix } from './constants';

@@ -1,5 +1,5 @@
-import { startServer } from "../startServer";
-import { AddressInfo } from "net";
+import { startServer } from '../startServer';
+import { AddressInfo } from 'net';
 
 export const setup = async () => {
   const app = await startServer();

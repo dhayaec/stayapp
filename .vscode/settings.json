@@ -4,5 +4,13 @@
   "files.exclude": {
     "**/node_modules/": true,
     "**/._*": true
-  }
+  },
+  "cSpell.words": [
+    "flushall",
+    "grapqhl",
+    "postgres",
+    "resave",
+    "sparkpost",
+    "typeorm"
+  ]
 }

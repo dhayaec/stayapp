@@ -1,14 +1,14 @@
-import * as yup from "yup";
+import * as yup from 'yup';
 
-import { ResolverMap } from "../../../types/graphql-utils";
-import { User } from "../../../entity/User";
-import { formatYupError } from "../../../utils/formatYupError";
+import { ResolverMap } from '../../../types/graphql-utils';
+import { User } from '../../../entity/User';
+import { formatYupError } from '../../../utils/formatYupError';
 import {
   duplicateEmail,
   emailNotLongEnough,
   invalidEmail
-} from "./errorMessages";
-import { registerPasswordValidation } from "../../../yupSchemas";
+} from './errorMessages';
+import { registerPasswordValidation } from '../../../yupSchemas';
 // import { createConfirmEmailLink } from "../../utils/createConfirmEmailLink";
 // import { sendEmail } from "../../utils/sendEmail";
 
@@ -38,13 +38,13 @@ export const resolvers: ResolverMap = {
 
       const userAlreadyExists = await User.findOne({
         where: { email },
-        select: ["id"]
+        select: ['id']
       });
 
       if (userAlreadyExists) {
         return [
           {
-            path: "email",
+            path: 'email',
             message: duplicateEmail
           }
         ];
