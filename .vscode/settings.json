@@ -11,6 +11,8 @@
     "postgres",
     "resave",
     "sparkpost",
-    "typeorm"
+    "stayapp",
+    "typeorm",
+    "workspaces"
   ]
 }
