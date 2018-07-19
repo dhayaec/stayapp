@@ -1,0 +1,8 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "tslint.autoFixOnSave": true,
+  "files.exclude": {
+    "**/node_modules/": true,
+    "**/._*": true
+  }
+}
